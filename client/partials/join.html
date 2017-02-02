@@ -1,0 +1,74 @@
+<nav class="navbar navbar-inverse  navbar-fixed-top center">
+	<div class='container-fluid'>
+		<div class='navbar-header'>
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+	            <span class="sr-only">Toggle navigation</span>
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+	        </button>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+        	<div class='navbar-inner'>
+	            <ul class="nav navbar-nav">
+	                <li><a href="#/home">Home</a></li>
+	                <li><a href="#/about">About</a></li>
+	                <li><a href="#/events">Events</a></li>
+	                <li class='active'><a href="#/join">Join</a></li>
+	                <li><a href="#/gallery">Gallery</a></li>
+	                <li><a href="#/contact">Contact</a></li>
+	            </ul>
+	        </div>
+		</div><!--/.nav-collapse -->
+	</div>
+</nav>
+<div class='header'>
+	<img src='/static/img/prsd_logo.jpg' class='img-responsive center-block' id='logo' alt='Platte River Scuba Divers logo'/>
+</div>
+<div class='container main'>
+	<div class="row">
+		<h3 class='text-center mission'>Promote fun and safe diving for all ages.  Explore and protect our aquatic environment.  Stay active in diving.</h3>
+		<div class='col-lg-6 col-md-6 col-sm-6 col-centered '>
+			<p class='text-center'>Join the Platte River Scuba Divers!  Please fill out and submit the form below.</p>
+			<form name='joinForm' ng-submit='send_email(joinForm.$valid)' novalidate>
+				<!-- Name -->
+				<div class='form-group' ng-class="{ 'has-error' : joinForm.name.$invalid && !joinForm.name.$pristine,
+				'has-success' : joinForm.name.$valid }">
+					<label for='name' class='sr-only'>Name</label>
+					<input type='text' id='name' name='name' class='form-control' placeholder='Name...' ng-model='newEmail.name' required>
+					<p ng-show='joinForm.name.$invalid && !joinForm.name.$pristine' class='help-block'>Your name is required.</p>
+				</div>
+				<!-- Email -->
+				<div class='form-group' ng-class="{ 'has-error' : joinForm.email.$invalid && !joinForm.email.$pristine,
+				'has-success' : joinForm.email.$valid }">
+					<label for='email' class='sr-only'>Email</label>
+					<input type='email' id='email' name='email' class='form-control' placeholder='Email...' ng-model='newEmail.email' required>
+					<p ng-show='joinForm.email.$invalid && !joinForm.email.$pristine' class='help-block'>Please enter a valid email address.</p>
+				</div>
+				<!-- Comments -->
+				<div class='form-group'>
+					<textarea class="form-control" id='comments' name='comments' rows="3" placeholder='Comments...' ng-model='newEmail.comments'></textarea>
+				</div>
+				<button type='submit' class='btn btn-large center-block' ng-disabled='joinForm.$invalid'>Join Now</button>
+			</form>
+		</div>
+	</div>
+	<div class="row">
+		<div class='col-lg-6 col-md-6 col-sm-6 pull-left' id='left_div'>
+			<a href="http://http://www.watersportsunlimited.net/index.htm">
+				<img id="watersportsLogo" class='img-responsive pull-left' src="/static/img/watersports_logo.jpg" alt="Watersports Unlimited Logo">
+			</a>
+		</div>
+		<div class='col-lg-6 col-md-6 col-sm-6 pull-right' id='right_div'>
+			<a href='https://www.padi.com/'>
+				<img id="padiLogo"  class='img-responsive pull-right' src="/static/img/padi_logo.jpg" alt="Professional Association of Dive Instructors Logo">
+			</a>
+		</div>
+	</div>
+</div>
+<div class='footer-border'></div>
+<footer class='footer footer-inverse'>
+	<p class='text-muted text-center'>Copyright &copy; 2017 Platte River Scuba Divers</p>
+	<p class='text-center'><small>All images and logos are property of their respective owners</small></p>
+</footer>
+

@@ -1,0 +1,297 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
+/* ***************************************************** Font Sizing ******************************************** */
+  h1 {
+    font-size: 2.5rem; /* 2.5rem (40px) */
+  }
+  h2 {
+    font-size: 2rem; /* 2rem (32px) */
+  }
+  h3 {
+    font-size: 1.75rem; /* 1.75rem (28px) */
+  }
+  h4 {
+    font-size: 1.5rem; /* 1.5rem (24px) */
+  }
+  h5 {
+    font-size: 1.25rem; /* 1.25rem (20px) */
+  }
+  h6 {
+    font-size: 1rem; /* 1rem (16px) */
+  }
+
+    /* Extra small devices (phones, up to 480px) */
+  @media screen and (max-width: 767px) {
+    .home_font h1  {
+      font-size: 5rem;
+    }
+    .home_font h2 {
+      font-size: 2rem;
+    }
+    .home_nebraska {
+      font-size: 3rem;
+    }
+    .home_p {
+      font-size: 2.5rem;
+    }
+  }
+  /* Small devices (tablets, 768px and up) */
+  @media (min-width: 768px) and (max-width: 991px) {
+    .home_font h1  {
+      font-size: 6rem;
+    }
+    .home_font h2 {
+      font-size: 3rem;
+    }
+    .home_nebraska {
+      font-size: 4rem;
+    }
+    .home_p {
+      font-size: 3rem;
+    }
+  }
+  /* tablets/desktops and up ----------- */
+  @media (min-width: 992px) and (max-width: 1199px) {
+    .home_font h1  {
+      font-size: 7rem;
+    }
+    .home_font h2 {
+      font-size: 3.5rem;
+    }
+    .home_nebraska {
+      font-size: 5rem;
+    }
+    .home_p {
+      font-size: 3rem;
+    }
+  }
+  /* large desktops and up ----------- */
+  @media screen and (min-width: 1200px) {
+    .home_font h1  {
+      font-size: 9rem;
+    }
+    .home_font h2 {
+      font-size: 4.5rem;
+    }
+    .home_nebraska {
+      font-size: 7rem;
+    }
+    .home_p {
+      font-size: 4rem;
+    }
+  }
+/* *************************************************************************************************************** */
+
+html {
+  position: relative;
+  /* This image will be displayed fullscreen */
+  /*background: url('/static/img/flags.jpeg') no-repeat center center;*/
+  /* Ensure the html element always takes up the full height of the browser window */
+  /*min-height: 100%;*/
+  /*background-size: cover;*/
+}
+
+  body {
+    min-height: 100%;
+    background: transparent;
+    padding-top: 4.375em; /* ~70px to keep fixed navbar off body content */
+    }
+    .mission {
+      color: #ff0000;
+      margin: 2% 0;
+    }
+    .header {
+      padding-top: 1%;
+      height: 25%;
+      width: 100%;
+    }
+    .main {
+    	margin-top: 1%;
+    }
+      #left_div {
+        width: 40%;
+        display: inline-block;
+        vertical-align: top;
+      }
+      #right_div {
+        width: 40%;
+        display: inline-block;
+      }
+    .officer-bottom-margin{
+      margin-bottom: 2.5%;
+    }
+    h5 {
+      font-size: 3rem;
+    }
+
+  .home {
+    margin: 0 0 12.5% 0;
+  }
+
+  .flex_parent {
+    margin-top: 22.5%;
+  }
+    .brand {
+    color: #fff;
+  }
+
+  footer {
+    padding-top: 1%;
+    height: 10%;
+    font-weight: bold;
+  }
+    .footer-border {
+      margin: 0.5% 0;
+      border-bottom: 5px solid #000;
+    }
+    .footer p {
+      color: #000;
+    }
+/* ****************************************** Navbar ************************************************** */
+  .nav_home {
+    background: transparent;
+    background-color: transparent;
+    border-color: transparent;
+  }
+    .nav_home .navbar-nav>.active>a,
+    .nav_home .navbar-nav>.active>a:hover {
+      background-color: transparent;
+    }
+
+  .navbar .navbar-nav {
+    display: inline-block;
+    float: none;
+    vertical-align: top;
+  }
+
+  .navbar .navbar-collapse {
+    text-align: center;
+  }
+
+  /* Extra small devices (phones, up to 480px) */
+  @media screen and (max-width: 767px) {
+  }
+  /* Small devices (tablets, 768px and up) */
+  @media (min-width: 768px) and (max-width: 991px) {
+  }
+  /* tablets/desktops and up ----------- */
+  @media (min-width: 992px) and (max-width: 1199px) {
+      .nav li {
+      font-size: 20px;
+    }
+  }
+  /* large desktops and up ----------- */
+  @media screen and (min-width: 1200px) {
+      .nav li {
+      font-size: 25px;
+    }
+  }
+
+  ul.nav li a {
+    color: #fff !important;
+  }
+  ul.nav li.active a {
+    color: #00ff00 !important;
+  }
+/* ******************************************************************************************************** */
+
+/* *************************** .col-centered is for centering inputs and divs ***************************** */
+.col-centered {
+	margin: 0 auto;
+	float: none;
+}
+/*********************************************************************************************************** */
+
+/* **************************************** Images ********************************************************* */
+.selfie {
+  display: inline-block;
+  height: 50%;
+  width: 50%;
+}
+  .officer .selfie {
+    height: 70%;
+    width: 70%;
+  }
+
+  .board_selfie {
+    margin: 0 0 5% 0;
+  }
+
+  #watersportsLogo {
+   vertical-align: middle;
+  }
+
+.thumbnail img {
+  width: 250px;
+  height: 200px;
+}
+/* Extra small devices (phones, up to 480px) */
+@media screen and (max-width: 767px) {
+  #logo,
+  #watersportsLogo,
+  #padiLogo {
+    height: 70%;
+    width: 70%;
+  }
+}
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991px) {
+  #logo,
+  #watersportsLogo,
+  #padiLogo  {
+    height: 50%;
+    width: 50%;
+  }
+}
+/* tablets/desktops and up ----------- */
+@media (min-width: 992px) and (max-width: 1199px) {
+  #logo,
+  #watersportsLogo,
+  #padiLogo  {
+    height: 40%;
+    width: 40%;
+  } 
+}
+/* large desktops and up ----------- */
+@media screen and (min-width: 1200px) {
+  #logo {
+    height: 30%;
+    width: 30%;
+  }
+  #watersportsLogo {
+    height: 50%;
+    width: 50%;
+  }
+  #padiLogo {
+    height: 40%;
+    width: 40%;
+  }
+}
+/* ************************************************************************************************************* */
+
+/* ******************************************** Carousel ******************************************************* */
+.carousel-inner > .item > img {
+      width: 70%;
+      margin: auto;
+  }
+/* ************************************************************************************************************* */
+
+/* ******************************************* Background Video ************************************************* */
+#background {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background: url(/static/img/flags.jpeg) no-repeat;
+    background-size: cover;
+}
+/* ***************************************** */

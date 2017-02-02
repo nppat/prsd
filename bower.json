@@ -1,0 +1,21 @@
+{
+  "name": "prsd",
+  "homepage": "https://github.com/nppat/web_practice",
+  "authors": [
+    "Patrick Adamson <nppat@hotmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.8",
+    "angular-route": "^1.5.8"
+  }
+}
