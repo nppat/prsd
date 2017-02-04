@@ -30,26 +30,22 @@
 		<h3 class='text-center mission'>Promote fun and safe diving for all ages.  Explore and protect our aquatic environment.  Stay active in diving.</h3>
 		<div class='col-lg-6 col-md-6 col-sm-6 col-centered '>
 			<p class='text-center'>Join the Platte River Scuba Divers!  Please fill out and submit the form below.</p>
-			<form name='joinForm' ng-submit='send_email(joinForm.$valid)' novalidate>
+			<form name='joinForm' ng-submit='send_email()'>
 				<!-- Name -->
-				<div class='form-group' ng-class="{ 'has-error' : joinForm.name.$invalid && !joinForm.name.$pristine,
-				'has-success' : joinForm.name.$valid }">
+				<div class='form-group'>
 					<label for='name' class='sr-only'>Name</label>
 					<input type='text' id='name' name='name' class='form-control' placeholder='Name...' ng-model='newEmail.name' required>
-					<p ng-show='joinForm.name.$invalid && !joinForm.name.$pristine' class='help-block'>Your name is required.</p>
 				</div>
 				<!-- Email -->
-				<div class='form-group' ng-class="{ 'has-error' : joinForm.email.$invalid && !joinForm.email.$pristine,
-				'has-success' : joinForm.email.$valid }">
+				<div class='form-group'>
 					<label for='email' class='sr-only'>Email</label>
 					<input type='email' id='email' name='email' class='form-control' placeholder='Email...' ng-model='newEmail.email' required>
-					<p ng-show='joinForm.email.$invalid && !joinForm.email.$pristine' class='help-block'>Please enter a valid email address.</p>
 				</div>
 				<!-- Comments -->
 				<div class='form-group'>
 					<textarea class="form-control" id='comments' name='comments' rows="3" placeholder='Comments...' ng-model='newEmail.comments'></textarea>
 				</div>
-				<button type='submit' class='btn btn-large center-block' ng-disabled='joinForm.$invalid'>Join Now</button>
+				<button type='submit' id='submitBtn' class='btn btn-large center-block'>Join Now</button>
 			</form>
 		</div>
 	</div>

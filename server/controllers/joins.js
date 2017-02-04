@@ -11,7 +11,7 @@ function JoinController() {
 
 		// Gather up email from form
 		var mailData = {
-				    		to: 'csack99@hotmail.com, nppat@hotmail.com, npwiezorek@hotmail.com', // list of receivers
+				    		to: 'csack99@hotmail.com, nppat@hotmail.com', // list of receivers
 							from: req.body.email,
 				    		subject:'PRSD New Member', // Subject line
 				    		text: req.body.comments // plaintext body
@@ -33,3 +33,5 @@ function JoinController() {
 }
 
 module.exports = new JoinController();
+
+// , npwiezorek@hotmail.com
