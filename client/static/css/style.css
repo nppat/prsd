@@ -138,6 +138,10 @@ html {
     color: #fff;
   }
 
+  #submit_button {
+    background-color: #66ccff;
+    color: #000;
+  }
   footer {
     padding-top: 1%;
     height: 10%;
