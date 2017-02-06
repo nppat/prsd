@@ -96,7 +96,7 @@ html {
 
   body {
     min-height: 100%;
-    background: transparent;
+    /*background: transparent;*/
     padding-top: 4.375em; /* ~70px to keep fixed navbar off body content */
     }
     .mission {
@@ -160,7 +160,18 @@ html {
     .nav_home .navbar-nav>.active>a:hover {
       background-color: transparent;
     }
-
+  /* Extra small devices (phones, up to 480px) */
+  @media screen and (max-width: 767px) {
+    .nav_home {
+    background: #000;
+    background-color: #000;
+    border-color: #000;
+  }
+    .nav_home .navbar-nav>.active>a,
+    .nav_home .navbar-nav>.active>a:hover {
+      background-color: transparent;
+    }
+  }
   .navbar .navbar-nav {
     display: inline-block;
     float: none;
@@ -280,18 +291,22 @@ html {
 /* ************************************************************************************************************* */
 
 /* ******************************************* Background Video ************************************************* */
-#background {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    z-index: -100;
-    -webkit-transform: translateX(-50%) translateY(-50%);
-    transform: translateX(-50%) translateY(-50%);
-    background: url(/static/img/flags.jpeg) no-repeat;
-    background-size: cover;
-}
+  .background_video {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      z-index: -100;
+      -webkit-transform: translateX(-50%) translateY(-50%);
+      transform: translateX(-50%) translateY(-50%);
+      background: url(/static/img/flags.jpeg) no-repeat;
+      background-size: cover;
+  }
+  .bgVideo_container {
+    position: relative;
+    overflow: hidden;
+  }
 /* ***************************************** */
