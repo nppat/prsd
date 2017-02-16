@@ -313,4 +313,13 @@ html {
     position: relative;
     overflow: hidden;
   }
+
+  /*  When on device <= 640px, display background img instead of video */
+  /* @media (max-width: 640px) {
+    .background_video {
+        background: url('/static/img/flags.jpeg') #000!important;
+        background-size: cover;
+    }
+    .bgVideo_container { display: none; } */
+}
 /* ***************************************** */
