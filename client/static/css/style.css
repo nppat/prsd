@@ -88,7 +88,7 @@
 html {
   position: relative;
   /* This image will be displayed fullscreen */
-  /*background: url('/static/img/flags.jpeg') no-repeat center center;*/
+  /*background: url('/static/img/flags.jpg') no-repeat center center;*/
   /* Ensure the html element always takes up the full height of the browser window */
   /*min-height: 100%;*/
   /*background-size: cover;*/
@@ -306,7 +306,7 @@ html {
       z-index: -100;
       -webkit-transform: translateX(-50%) translateY(-50%);
       transform: translateX(-50%) translateY(-50%);
-      background: url('/static/img/flags.jpeg') #000 no-repeat center center;
+      background: url('/static/img/flags.jpg') #000 no-repeat center center;
       background-size: cover;
   }
   .bgVideo_container {
