@@ -90,8 +90,8 @@ html {
   /* This image will be displayed fullscreen */
   /*background: url('/static/img/flags.jpg') no-repeat center center;*/
   /* Ensure the html element always takes up the full height of the browser window */
-  /*min-height: 100%;*/
-  /*background-size: cover;*/
+  min-height: 100%;
+  background-size: cover;
 }
 
   body {
@@ -296,7 +296,7 @@ html {
 
 /* ******************************************* Background Video ************************************************* */
   .background_video {
-      position: fixed;
+      /*position: fixed;
       top: 50%;
       left: 50%;
       min-width: 100%;
@@ -305,13 +305,13 @@ html {
       height: auto;
       z-index: -100;
       -webkit-transform: translateX(-50%) translateY(-50%);
-      transform: translateX(-50%) translateY(-50%);
-      background: url('/static/img/flags.jpg') #000 no-repeat center center;
-      background-size: cover;
+      transform: translateX(-50%) translateY(-50%);*/
+      /*background: url('/static/img/flags.jpg') #000 no-repeat center center;
+      background-size: cover;*/
   }
   .bgVideo_container {
-    position: relative;
-    overflow: hidden;
+   /* position: relative;
+    overflow: hidden;*/
   }
 
   /*  When on device <= 640px, display background img instead of video */
