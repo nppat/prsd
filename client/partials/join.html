@@ -33,6 +33,16 @@
 			<p class='text-center'><strong>$20</strong> per year, individual or family.</p>
 			<p class='text-center'>Please fill out and submit the form below.</p>
 			<form name='joinForm' ng-submit='send_email()'>
+				<div class='joinMessage' ng-if='joinSuccess'> <!-- show any errors in sending the form -->
+					<div class='alert alert-success fade-in'>
+						<p class='text-center'>{{ joinSuccess }}</p>
+					</div>
+				</div>
+				<div class='joinMessage' ng-if='joinFail'> <!-- show any errors in sending the form -->
+					<div class='alert alert-danger fade-in'>
+						<p class='text-center'>{{ joinFail }}</p>
+					</div>
+				</div>
 				<!-- Name -->
 				<div class='form-group'>
 					<label for='name' class='sr-only'>Name</label>
