@@ -29,11 +29,10 @@
     	<script type="text/javascript" src='/assets/app.js'></script>
         <script type="text/javascript" src='/assets/factory/joinFactory.js'></script>
         <script type="text/javascript" src='/assets/controllers/joinController.js'></script>
+        <script type="text/javascript" src='/assets/controllers/backgroundController.js'></script>
     </head>
-    <body class="body_top_padding">
-        <!-- Load partials here in das div -->
-	    <div ng-view=''></div>
-
+    <!-- Partials are loaded into ng-view -->
+    <body class="body_top_padding" ng-view="" ng-style="bodyStyle">
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <!-- Include all compiled plugins (below), or include individual files as needed -->
