@@ -134,9 +134,36 @@ html {
   .flex_parent {
     margin-top: 15%;
   }
+
+  
+  /* Extra small devices (phones, up to 480px) */
+  @media screen and (max-width: 767px) {
     .brand {
-    color: #fff;
+      color: #000;
+    }
   }
+  /* Small devices (tablets, 768px and up) */
+  @media (min-width: 768px) and (max-width: 991px) {
+    .brand {
+      color: #fff;
+    }
+  }
+  /* tablets/desktops and up ----------- */
+  @media (min-width: 992px) and (max-width: 1199px) {
+    .brand {
+      color: #fff;
+    }
+  }
+  /* large desktops and up ----------- */
+  @media screen and (min-width: 1200px) {
+    .brand {
+      color: #fff;
+    }
+  }
+
+ /* .brand {
+    color: #fff;
+  }*/
 
   #submit_button {
     background-color: #66ccff;
