@@ -135,7 +135,7 @@ html {
     margin-top: 15%;
   }
 
-  
+
   /* Extra small devices (phones, up to 480px) */
   @media screen and (max-width: 767px) {
     .brand {
@@ -169,6 +169,16 @@ html {
     background-color: #66ccff;
     color: #000;
   }
+  .join_p {
+      display: inline-block;
+      vertical-align: top;
+      margin-right: 1%;
+  }
+  .join_form,
+  .join_address {
+      display: inline-block;
+  }
+
   footer {
     padding-top: 1%;
     height: 10%;
@@ -295,7 +305,7 @@ html {
   #padiLogo  {
     height: 40%;
     width: 40%;
-  } 
+  }
 }
 /* large desktops and up ----------- */
 @media screen and (min-width: 1200px) {

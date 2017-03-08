@@ -33,5 +33,3 @@ function JoinController() {
 }
 
 module.exports = new JoinController();
-
-// , npwiezorek@hotmail.com

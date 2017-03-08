@@ -8,7 +8,7 @@ app.config(['$routeProvider', function($routeProvider) {
             controller: 'BackgroundController'
           })
           .when('/join', {
-            templateUrl: 'partials/join.html',
+            templateUrl: 'partials/join2.html',
             controller: 'JoinController'
           })
           .when('/about', {
