@@ -165,7 +165,7 @@ html {
     color: #fff;
   }*/
 
-  #submit_button {
+  .paypal_btn {
     background-color: #66ccff;
     color: #000;
   }
