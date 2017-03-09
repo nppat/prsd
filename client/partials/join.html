@@ -29,19 +29,30 @@
 	<div class="row">
 		<h3 class='text-center mission'>Promote fun and safe diving for all ages.  Explore and protect our aquatic environment.  Stay active in diving.</h3>
 		<div class='col-lg-6 col-md-6 col-sm-6 col-centered '>
-			<p class='text-center'>Join the Platte River Scuba Divers!</p>
-			<p class='text-center'><strong>$21</strong> per year by paying via PayPal</p>
-			<!-- PayPal button -->
-			<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-			<input type="hidden" name="cmd" value="_s-xclick">
-			<input type="hidden" name="hosted_button_id" value="ZXQM7HD3ZHC5Q">
-			<input type="image" role='button' type='submit' class='center-block' src="https://www.paypalobjects.com/en_US/i/btn/btn_paynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-			<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-			</form>
-			<!-- End PayPal button -->
-			<p class='text-center'><strong>$20</strong> per year paying with cash or check</p>
-			<p class='text-center'>Please fill out and submit the form below.</p>
-			<form name='joinForm' ng-submit='send_email()'>
+			<h2 class='text-center'>Join the Platte River Scuba Divers!</h2>
+			<div class='row'>
+				<div class="col-lg-6 col-md-6 col-sm-6">
+					<h3 class='text-center'>PayPal</h3>
+					<h4 class='text-center'><strong>$21</strong></h4>
+					<p class='text-center'><small>* inlcudes $1 handling fee</small></p>
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-6">
+					<h3 class='text-center'>Cash or Check</h3>
+					<h4 class='text-center'>$20</h4>
+					<div class='text-center'>
+						<p class='join_p'>Mail to:</p>
+						<address class='join_address'>
+						  <strong>Nikki Wiezorek</strong><br>
+						  905 East 4th Street<br>
+						  North Platte, NE, 69101<br>
+						</address>
+					</div>
+				</div>
+			</div>
+			<p class='text-center'>Paying with PayPal?  Fill out the form and join today!</p>
+			<form name='joinForm' ng-submit='send_email()' action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+				<input type="hidden" name="cmd" value="_s-xclick"> <!-- PayPal -->
+				<input type="hidden" name="hosted_button_id" value="ZXQM7HD3ZHC5Q"> <!-- PayPal -->
 				<div class='joinMessage' ng-if='joinSuccess'> <!-- show any errors in sending the form -->
 					<div class='alert alert-success fade-in'>
 						<p class='text-center'>{{ joinSuccess }}</p>
@@ -66,8 +77,13 @@
 				<div class='form-group'>
 					<textarea class="form-control" id='comments' name='comments' rows="3" placeholder='Comments...' ng-model='newEmail.comments'></textarea>
 				</div>
-				<button type='submit' id='submit_button' class='btn btn-large center-block'>Join Now</button>
+				<button type="submit" id='paypal_btn' class='btn btn-large center-block paypal_btn'>Pay Now</button>
 			</form>
+		</div>
+		<div class="row">
+			<div class="col-lg-12 col-md-12 col-sm-12">
+				<img class='img-responsive center-block' src="https://www.paypalobjects.com/webstatic/mktg/logo/AM_mc_vs_dc_ae.jpg" border="0" alt="PayPal Acceptance Mark">
+			</div>
 		</div>
 	</div>
 	<div class="row">
@@ -88,3 +104,11 @@
 	<p class='text-muted text-center'>Copyright &copy; 2017 Platte River Scuba Divers</p>
 	<p class='text-center'><small>All images and logos are property of their respective owners</small></p>
 </footer>
+
+
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="ZXQM7HD3ZHC5Q">
+<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_paynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>
