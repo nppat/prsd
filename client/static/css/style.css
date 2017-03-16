@@ -135,6 +135,23 @@ html {
     margin-top: 15%;
   }
 
+  /* ************************ Nationals partial styles ************************ */
+  #nationals h1 {
+      font-size: 4rem;
+  }
+  #nationals h2 {
+      font-size: 3rem;
+  }
+
+  .nationals_div {
+      background-color: #e7eff6;
+  }
+  .nationals_p_boarder {
+      border-bottom: 1px solid #000;
+      width: 50%;
+      margin: 0 auto;
+      padding: 0 0 2.5% 0;
+  }
 
   /* Extra small devices (phones, up to 480px) */
   @media screen and (max-width: 767px) {

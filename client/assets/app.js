@@ -23,6 +23,9 @@ app.config(['$routeProvider', function($routeProvider) {
           .when('/contact', {
             templateUrl: 'partials/contact.html',
           })
+          .when('/register', {
+              templateUrl: 'partials/registration_nationals.html'
+          })
           .otherwise({
             redirectTo: '/home'
           });
