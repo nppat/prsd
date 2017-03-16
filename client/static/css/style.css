@@ -111,6 +111,11 @@ html {
     .main {
     	margin-top: 1%;
     }
+      #row_1,
+      #row_2 p,
+      #row_3 {
+          margin-bottom: 2.5%;
+      }
       #left_div {
         width: 40%;
         display: inline-block;
