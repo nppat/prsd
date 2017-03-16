@@ -152,7 +152,15 @@ html {
       margin: 0 auto;
       padding: 0 0 2.5% 0;
   }
-
+  #nationals_form_div {
+      text-align: center;
+      width: 100%;
+  }
+  #nationals_form {
+      display: inline-block;
+      width: 80%;
+  }
+/* *************************************************************************** */
   /* Extra small devices (phones, up to 480px) */
   @media screen and (max-width: 767px) {
     .brand {
