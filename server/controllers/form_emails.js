@@ -14,12 +14,22 @@ function NationalController() {
 				    		to: 'nppat@hotmail.com', // list of receivers
 							// platteriverscubadivers@gmail.com, csack99@hotmail.com,
 							// from: req.body.email,
-				    		subject: req.body.diver1_first_name + ' ' + req.body.diver1_last_name + ' has registered for Nationals', // Subject line
-				    		text: '**** Name - ' +  req.body.diver1_first_name + ' ' + req.body.diver1_last_name + ' ****' +
-							'**** Email - ' + req.body.diver1_email + ' ****' +
-							'**** Address - ' + req.body.diver1_address + ', ' + req.body.diver1_city + ', ' +  req.body.diver1_state + ', ' + req.body.diver1_zipCode + ' ****' +
-							'**** Phone - ' + req.body.diver1_phone + ' ****' +
-							'**** Emergency Contact - ' + req.body.diver1_emergencyName + ', ' + req.body.diver1_emergencyPhone // plaintext body
+				    		subject: req.body.diver1_first_name + ' ' + req.body.diver1_last_name +' and ' + req.body.diver2_first_name + ' ' + req.body.diver2_last_name + ' have registered for Nationals', // Subject line
+				    		text:
+							'******** Diver 1 ********\n' +
+							'* Name - ' +  req.body.diver1_first_name + ' ' + req.body.diver1_last_name + '\n' +
+							'* Email - ' + req.body.diver1_email + '\n' +
+							'* Address - ' + req.body.diver1_address + ', ' + req.body.diver1_city + ', ' +  req.body.diver1_state + ', ' + req.body.diver1_zipCode + '\n' +
+							'* Phone - ' + req.body.diver1_phone + '\n' +
+							'* Emergency Contact - ' + req.body.diver1_emergencyName + ', ' + req.body.diver1_emergencyPhone + '\n\n\n' +
+
+							'******** Diver 2 ********\n' +
+							'* Name - ' +  req.body.diver2_first_name + ' ' + req.body.diver2_last_name + '\n' +
+							'* Email - ' + req.body.diver2_email + '\n' +
+							'* Address - ' + req.body.diver2_address + ', ' + req.body.diver2_city + ', ' +  req.body.diver2_state + ', ' + req.body.diver2_zipCode + '\n' +
+							'* Phone - ' + req.body.diver2_phone + '\n' +
+							'* Emergency Contact - ' + req.body.diver2_emergencyName + ', ' + req.body.diver2_emergencyPhone
+							 // plaintext body
 				    	};
 
 		console.log(mailData);
