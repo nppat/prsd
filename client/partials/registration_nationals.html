@@ -56,55 +56,68 @@
     <div class="row" id='row_3'>
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id='nationals_form_div'>
             <h2>Register</h2>
-            <form class="form-horizontal" id='nationals_form' action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+            <form ng-submit='send_email()' name='nationalsForm' class="form-horizontal" id='nationals_form'  method="post" target="_top" ng-submit="submitForm(userForm.$valid)" novalidate>
 				<input type="hidden" name="cmd" value="_s-xclick"> <!-- PayPal -->
-				<input type="hidden" name="hosted_button_id" value="ZXQM7HD3ZHC5Q"> <!-- PayPal -->
+				<input type="hidden" name="hosted_button_id" value="NFG2QEXCNTAFL"> <!-- PayPal -->
                 <!-- Error Messaging -->
-				<!-- <div class='joinMessage' ng-if='joinSuccess'> <!-- show any errors in sending the form -->
-					<!-- <div class='alert alert-success fade-in'>
-						<p class='text-center'>{{ joinSuccess }}</p>
+				<div class='formMessage' ng-if='formSuccess'> <!-- show any errors in sending the form -->
+					<div class='alert alert-success fade-in'>
+						<p class='text-center'>{{ formSuccess }}</p>
 					</div>
 				</div>
-				<div class='joinMessage' ng-if='joinFail'> <!-- show any errors in sending the form -->
-					<!-- <div class='alert alert-danger fade-in'>
-						<p class='text-center'>{{ joinFail }}</p>
+				<div class='formMessage' ng-if='formFail'> <!-- show any errors in sending the form -->
+					<div class='alert alert-danger fade-in'>
+						<p class='text-center'>{{ formFail }}</p>
 					</div>
-				</div> -->
+				</div>
 
-                <div class="form-group">
-                    <!-- Diver 1 First & Last Name -->
+                <div class="form-group" ng-class="{ 'has-error' : nationalsForm.diver_1_first_name.$invalid && !nationalsForm.diver_1_first_name.$pristine }">
+                    <!-- Diver 1 First and Last Name -->
                     <label class="sr-only" for='diver_1_first_name'>First Name</label>
-                    <div class='col-lg-6'>
-                        <input type="text" class='form-control' name="diver_1_first_name" value="First Name..." autofocus="">
+                    <div class='col-lg-12'>
+                        <input type="text" class='form-control' name="diver_1_first_name" placeholder="First Name..." ng-model="nationals.diver1_first_name" ng-minlength='2' required>
+                        <p ng-show="nationalsForm.diver_1_first_name.$invalid && !nationalsForm.diver_1_first_name.$pristine" class="help-block">Your first name is required.</p>
+                        <p ng-show="nationalsForm.diver_1_first_name.$error.minlength" class="help-block">First name is too short.</p>
+                        <p ng-show="nationalsForm.diver_1_first_name.$error.maxlength" class="help-block">First name is too long.</p>
                     </div>
+                </div>
+                <div class="form-group" ng-class="{ 'has-error' : nationalsForm.diver_1_last_name.$invalid && !nationalsForm.diver_1_last_name.$pristine }">
                     <label class="sr-only" for='diver_1_last_name'>Last Name</label>
-                    <div class='col-lg-6'>
-                        <input type="text" class='form-control' name="diver_1_last_name" value="Last Name...">
+                    <div class='col-lg-12'>
+                        <input type="text" class='form-control' name="diver_1_last_name" placeholder="Last Name..." ng-model="nationals.diver1_last_name" ng-minlength='2' required>
+                        <p ng-show="nationalsForm.diver_1_last_name.$invalid && !nationalsForm.diver_1_last_name.$pristine" class="help-block">You last name is required.</p>
+                        <p ng-show="nationalsForm.diver_1_last_name.$error.minlength" class="help-block">Last name is too short.</p>
+                        <p ng-show="nationalsForm.diver_1_last_name.$error.maxlength" class="help-block">Last name is too long.</p>
                     </div>
                 </div>
                 <!-- Diver 1 Email -->
-                <div class="form-group">
+                <div class="form-group" ng-class="{ 'has-error' : nationalsForm.diver_1_email.$invalid && !nationalsForm.diver_1_email.$pristine }">
                     <label class="sr-only" for='diver_1_email'>Email</label>
                     <div class='col-sm-12'>
-                        <input type="email" class='form-control' name="diver_1_email" value="Email...">
+                        <input type="email" class='form-control' name="diver_1_email" placeholder="Email..." ng-model="nationals.diver1_email" required>
+                        <p ng-show="nationalsForm.diver_1_email.$invalid && !nationalsForm.diver_1_email.$pristine" class="help-block">You email is required.</p>
                     </div>
                 </div>
                 <!-- Diver 1 Address -->
-                <div class="form-group">
+                <div class="form-group" ng-class="{ 'has-error' : nationalsForm.diver_1_street_address.$invalid && !nationalsForm.diver_1_street_address.$pristine}">
                     <!-- Street Address -->
                     <label class="sr-only" for='diver_1_street_address'>Street Address</label>
                     <div class='col-sm-12'>
-                        <input type="text" class='form-control' name="diver_1_street_address" value="Street Address...">
+                        <input type="text" class='form-control' name="diver_1_street_address" placeholder="Street Address..." ng-model='nationals.diver1_address' ng-minlength='2' required>
+                        <p ng-show="nationalsForm.diver_1_street_address.$invalid && !nationalsForm.diver_1_street_address.$pristine" class="help-block">You address is required.</p>
+                        <p ng-show="nationalsForm.diver_1_street_address.$error.minlength" class="help-block">Address is too short.</p>
                     </div>
                     <!-- City -->
                     <label class="sr-only" for='diver_1_city'>City</label>
                     <div class='col-sm-4'>
-                        <input type="text" class='form-control' name="diver_1_city" value="City...">
+                        <input type="text" class='form-control' name="diver_1_city" placeholder="City..." ng-model='nationals.diver1_city' ng-minlength='2' required>
+                        <p ng-show="nationalsForm.diver_1_city.$invalid && !nationalsForm.diver_1_city.$pristine" class="help-block">You city is required.</p>
+                        <p ng-show="nationalsForm.diver_1_city.$error.minlength" class="help-block">City is too short.</p>
                     </div>
                     <!-- State -->
                     <div class="col-sm-4">
                 		<label for="state_id" class="sr-only">State</label>
-                    		<select class="form-control" id="diver_1_state_id" name='diver_1_state'>
+                    		<select class="form-control" id="diver_1_state_id" name='diver_1_state' ng-model='nationals.diver1_state' required>
                                 <option value="">Select your state</option>
                     			<option value="AL">Alabama</option>
                     			<option value="AK">Alaska</option>
@@ -158,32 +171,44 @@
                     			<option value="WI">Wisconsin</option>
                     			<option value="WY">Wyoming</option>
                 		    </select>
+                            <p ng-show="nationalsForm.diver_1_state.$invalid && !nationalsForm.diver_1_state.$pristine" class="help-block">Your state is required.</p>
                 	</div>
                     <!-- Zip Code -->
                     <label class="sr-only" for='diver_1_zip_code'>Zip Code</label>
                     <div class='col-sm-4'>
-                        <input type="text" class='form-control' name="diver_1_zip_code" value="Zip Code...">
+                        <input type="text" class='form-control' name="diver_1_zip_code" placeholder="Zip Code..." ng-model='nationals.diver1_zipCode' ng-minlength='5' ng-maxlength='5' required>
+                        <p ng-show="nationalsForm.diver_1_zip_code.$invalid && !nationalsForm.diver_1_zip_code.$pristine" class="help-block">Your zip code is required.</p>
+                        <p ng-show="nationalsForm.diver_1_zip_code.$error.minlength" class="help-block">Zip code is too short.</p>
+                        <p ng-show="nationalsForm.diver_1_zip_code.$error.maxlength" class="help-block">Zip code is too long.</p>
                     </div>
                 </div>
                 <!-- Phone Number -->
-                <div class="form-group">
+                <div class="form-group" ng-class="{ 'has-error' : nationalsForm.diver_1_phone_number.$invalid && !nationalsForm.diver_1_phone_number.$pristine}">
                     <label class="sr-only" for='diver_1_phone_number'>Phone Number</label>
                     <div class='col-sm-12'>
-                        <input type="text" class='form-control' name="diver_1_phone_number" value="Phone number i.e. (555)-555-5555...">
+                        <input type="text" class='form-control' name="diver_1_phone_number" placeholder="Phone number i.e. (555)-555-5555..." ng-model='nationals.diver1_phone' ng-minlength='14' ng-maxlength='14' required>
+                        <p ng-show="nationalsForm.diver_1_phone_number.$invalid && !nationalsForm.diver_1_phone_number.$pristine" class="help-block">Your phone number is required.</p>
+                        <p ng-show="nationalsForm.diver_1_phone_number.$error.minlength" class="help-block">Phone number is too short.</p>
+                        <p ng-show="nationalsForm.diver_1_phone_number.$error.maxlength" class="help-block">Phone number is too long.</p>
                     </div>
                 </div>
                 <!-- Emergency Contact -->
-                <div class="form-group">
+                <div class="form-group" ng-class="{ 'has-error' : nationalsForm.diver_1_emergency_name.$invalid && !nationalsForm.diver_1_emergency_name.$pristine}">
                     <label class="sr-only" for='diver_1_emergency_name'>Emergency Contact Name</label>
                     <div class='col-sm-6'>
-                        <input type="text" class='form-control' name="diver_1_emergency_name" value="Emergency Contact Name...">
+                        <input type="text" class='form-control' name="diver_1_emergency_name" placeholder="Emergency Contact Name..." ng-model='nationals.diver1_emergencyName' ng-minlength='2' required>
+                        <p ng-show="nationalsForm.diver_1_emergency_name.$invalid && !nationalsForm.diver_1_emergency_name.$pristine" class="help-block">Your emergency contact name is required.</p>
+                        <p ng-show="nationalsForm.diver_1_emergency_name.$error.minlength" class="help-block">Contact name is too short.</p>
                     </div>
                     <label class="sr-only" for='diver_1_emergency_phone'>Emergency Contact Phone Number</label>
                     <div class='col-sm-6'>
-                        <input type="text" class='form-control' name="diver_1_emergency_phone" value="Emergency Contact Phone Number i.e. (555)-555-5555...">
+                        <input type="text" class='form-control' name="diver_1_emergency_phone" placeholder="Emergency Contact Phone Number i.e. (555)-555-5555..." ng-model='nationals.diver1_emergencyPhone' ng-minlength='14' ng-maxlength='14' required>
+                        <p ng-show="nationalsForm.diver_1_emergency_phone.$invalid && !nationalsForm.diver_1_emergency_phone.$pristine" class="help-block">Your emergency phone number is required.</p>
+                        <p ng-show="nationalsForm.diver_1_emergency_phone.$error.minlength" class="help-block">Emergency phone number is too short.</p>
+                        <p ng-show="nationalsForm.diver_1_emergency_phone.$error.maxlength" class="help-block">Emergency phone number is too long.</p>
                     </div>
                 </div>
-                <button type="submit" id='paypal_btn' class='btn btn-large center-block paypal_btn'>Register Now!</button>
+                <button type="submit" id='paypal_btn' class='btn btn-large center-block paypal_btn' ng-disabled="nationalsForm.$invalid">Register Now</button>
             </form>
         </div>
     </div>
@@ -205,3 +230,6 @@
 	<p class='text-muted text-center'>Copyright &copy; 2017 Platte River Scuba Divers</p>
 	<p class='text-center'><small>All images and logos are property of their respective owners</small></p>
 </footer>
+
+
+<!-- action="https://www.paypal.com/cgi-bin/webscr"  -->

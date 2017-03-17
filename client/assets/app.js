@@ -24,7 +24,8 @@ app.config(['$routeProvider', function($routeProvider) {
             templateUrl: 'partials/contact.html',
           })
           .when('/register', {
-              templateUrl: 'partials/registration_nationals.html'
+              templateUrl: 'partials/registration_nationals.html',
+              controller: 'NationalsController'
           })
           .otherwise({
             redirectTo: '/home'
