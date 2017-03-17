@@ -11,7 +11,7 @@ function JoinController() {
 
 		// Gather up email from form
 		var mailData = {
-				    		to: 'csack99@hotmail.com, nppat@hotmail.com', // list of receivers
+				    		to: 'platteriverscubadivers@gmail.com, nppat@hotmail.com', // list of receivers
 							from: req.body.email,
 				    		subject: req.body.name + ' wants to join PRSD', // Subject line
 				    		text: req.body.comments // plaintext body
