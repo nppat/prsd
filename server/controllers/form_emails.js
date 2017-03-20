@@ -7,7 +7,7 @@ function NationalController() {
 
 		// create transporter
 		// send mail with password confirmation
-		var transporter = nodemailer.createTransport('smtps://postmaster@sandbox136a32ffceef489c9f9873d2fcdb36f7.mailgun.org:22b7b3a2d1c5bb0d76e747ae95b7ca59@smtp.mailgun.org');
+		var transporter = nodemailer.createTransport('smtps://postmaster@mail.platteriverscubadivers.com:e4945d760f5c7db341726ad934b668d1@smtp.mailgun.org');
 
 		// Gather up email from form
 		var mailData = {
