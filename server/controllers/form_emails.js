@@ -7,7 +7,13 @@ function NationalController() {
 
 		// create transporter
 		// send mail with password confirmation
-		var transporter = nodemailer.createTransport('smtps://postmaster@mail.platteriverscubadivers.com:e4945d760f5c7db341726ad934b668d1');
+		var transporter = nodemailer.createTransport({
+			service: 'Mailgun',
+			auth: {
+				user: 'postmaster@mail.platteriverscubadivers.com',
+				pass: 'e4945d760f5c7db341726ad934b668d1'
+			}
+		});
 
 		// Gather up email from form
 		var mailData = {
@@ -36,10 +42,10 @@ function NationalController() {
 		// Send email
 		transporter.sendMail(mailData, function(error, response) {
 			if(error){
-				console.log('[SERVER CONTROLLER JOINS ---> Send Email - ERROR] -- Email not sent');
+				console.log('[SERVER CONTROLLER Resgistration ---> Send Email - ERROR] -- Email not sent');
 				res.json({ error: 'Email not sent'});
 			} else {
-				console.log('[SERVER CONTROLLER JOINS ---> Send Email - SUCCESS] -- Email successully sent');
+				console.log('[SERVER CONTROLLER Registration ---> Send Email - SUCCESS] -- Email successully sent');
 				res.json({ success: 'Email has been sent.' })
 			}
 		});
