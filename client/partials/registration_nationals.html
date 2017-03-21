@@ -176,7 +176,7 @@
                     <!-- Zip Code -->
                     <label class="sr-only" for='diver_1_zip_code'>Zip Code</label>
                     <div class='col-sm-4'>
-                        <input type="text" class='form-control' name="diver_1_zip_code" placeholder="Zip Code..." ng-model='nationals.diver1_zipCode' ng-minlength='5' ng-maxlength='5' required>
+                        <input type="number" class='form-control' name="diver_1_zip_code" placeholder="Zip Code..." ng-model='nationals.diver1_zipCode' ng-minlength='5' ng-maxlength='5' required>
                         <p ng-show="nationalsForm.diver_1_zip_code.$invalid && !nationalsForm.diver_1_zip_code.$pristine" class="help-block">Your zip code is required.</p>
                         <p ng-show="nationalsForm.diver_1_zip_code.$error.minlength" class="help-block">Zip code is too short.</p>
                         <p ng-show="nationalsForm.diver_1_zip_code.$error.maxlength" class="help-block">Zip code is too long.</p>
@@ -186,7 +186,7 @@
                 <div class="form-group" ng-class="{ 'has-error' : nationalsForm.diver_1_phone_number.$invalid && !nationalsForm.diver_1_phone_number.$pristine}">
                     <label class="sr-only" for='diver_1_phone_number'>Phone Number</label>
                     <div class='col-sm-12'>
-                        <input type="text" class='form-control' name="diver_1_phone_number" placeholder="Phone number i.e. (555)-555-5555..." ng-model='nationals.diver1_phone' ng-minlength='14' ng-maxlength='14' required>
+                        <input type="text" class='form-control' name="diver_1_phone_number" placeholder="Phone number i.e. (555)-555-5555..." ng-model='nationals.diver1_phone' ng-minlength='10' ng-maxlength='14' required>
                         <p ng-show="nationalsForm.diver_1_phone_number.$invalid && !nationalsForm.diver_1_phone_number.$pristine" class="help-block">Your phone number is required.</p>
                         <p ng-show="nationalsForm.diver_1_phone_number.$error.minlength" class="help-block">Phone number is too short.</p>
                         <p ng-show="nationalsForm.diver_1_phone_number.$error.maxlength" class="help-block">Phone number is too long.</p>
@@ -202,7 +202,7 @@
                     </div>
                     <label class="sr-only" for='diver_1_emergency_phone'>Emergency Contact Phone Number</label>
                     <div class='col-sm-6'>
-                        <input type="text" class='form-control' name="diver_1_emergency_phone" placeholder="Emergency Contact Phone Number i.e. (555)-555-5555..." ng-model='nationals.diver1_emergencyPhone' ng-minlength='14' ng-maxlength='14' required>
+                        <input type="text" class='form-control' name="diver_1_emergency_phone" placeholder="Emergency Contact Phone Number i.e. (555)-555-5555..." ng-model='nationals.diver1_emergencyPhone' ng-minlength='10' ng-maxlength='14' required>
                         <p ng-show="nationalsForm.diver_1_emergency_phone.$invalid && !nationalsForm.diver_1_emergency_phone.$pristine" class="help-block">Your emergency phone number is required.</p>
                         <p ng-show="nationalsForm.diver_1_emergency_phone.$error.minlength" class="help-block">Emergency phone number is too short.</p>
                         <p ng-show="nationalsForm.diver_1_emergency_phone.$error.maxlength" class="help-block">Emergency phone number is too long.</p>
@@ -314,7 +314,7 @@
                     <!-- Zip Code -->
                     <label class="sr-only" for='diver_2_zip_code'>Zip Code</label>
                     <div class='col-sm-4'>
-                        <input type="text" class='form-control' name="diver_2_zip_code" placeholder="Zip Code..." ng-model='nationals.diver2_zipCode' ng-minlength='5' ng-maxlength='5' required>
+                        <input type="number" class='form-control' name="diver_2_zip_code" placeholder="Zip Code..." ng-model='nationals.diver2_zipCode' ng-minlength='5' ng-maxlength='5' required>
                         <p ng-show="nationalsForm.diver_2_zip_code.$invalid && !nationalsForm.diver_2_zip_code.$pristine" class="help-block">Your zip code is required.</p>
                         <p ng-show="nationalsForm.diver_2_zip_code.$error.minlength" class="help-block">Zip code is too short.</p>
                         <p ng-show="nationalsForm.diver_2_zip_code.$error.maxlength" class="help-block">Zip code is too long.</p>
@@ -324,7 +324,7 @@
                 <div class="form-group" ng-class="{ 'has-error' : nationalsForm.diver_2_phone_number.$invalid && !nationalsForm.diver_2_phone_number.$pristine}">
                     <label class="sr-only" for='diver_2_phone_number'>Phone Number</label>
                     <div class='col-sm-12'>
-                        <input type="text" class='form-control' name="diver_2_phone_number" placeholder="Phone number i.e. (555)-555-5555..." ng-model='nationals.diver2_phone' ng-minlength='14' ng-maxlength='14' required>
+                        <input type="text" class='form-control' name="diver_2_phone_number" placeholder="Phone number i.e. (555)-555-5555..." ng-model='nationals.diver2_phone' ng-minlength='10' ng-maxlength='14' required>
                         <p ng-show="nationalsForm.diver_2_phone_number.$invalid && !nationalsForm.diver_2_phone_number.$pristine" class="help-block">Your phone number is required.</p>
                         <p ng-show="nationalsForm.diver_2_phone_number.$error.minlength" class="help-block">Phone number is too short.</p>
                         <p ng-show="nationalsForm.diver_2_phone_number.$error.maxlength" class="help-block">Phone number is too long.</p>
@@ -340,7 +340,7 @@
                     </div>
                     <label class="sr-only" for='diver_2_emergency_phone'>Emergency Contact Phone Number</label>
                     <div class='col-sm-6'>
-                        <input type="text" class='form-control' name="diver_2_emergency_phone" placeholder="Emergency Contact Phone Number i.e. (555)-555-5555..." ng-model='nationals.diver2_emergencyPhone' ng-minlength='14' ng-maxlength='14' required>
+                        <input type="text" class='form-control' name="diver_2_emergency_phone" placeholder="Emergency Contact Phone Number i.e. (555)-555-5555..." ng-model='nationals.diver2_emergencyPhone' ng-minlength='10' ng-maxlength='14' required>
                         <p ng-show="nationalsForm.diver_2_emergency_phone.$invalid && !nationalsForm.diver_2_emergency_phone.$pristine" class="help-block">Your emergency phone number is required.</p>
                         <p ng-show="nationalsForm.diver_2_emergency_phone.$error.minlength" class="help-block">Emergency phone number is too short.</p>
                         <p ng-show="nationalsForm.diver_2_emergency_phone.$error.maxlength" class="help-block">Emergency phone number is too long.</p>
