@@ -16,12 +16,10 @@ function JoinController() {
 			}
 		});
 
-		// var transporter = nodemailer.createTransport('smtps://postmaster@sandbox136a32ffceef489c9f9873d2fcdb36f7.mailgun.org:22b7b3a2d1c5bb0d76e747ae95b7ca59@smtp.mailgun.org');
-
 		// Gather up email from form
 		var mailData = {
 				    		to: 'platteriverscubadivers@gmail.com, nppat@hotmail.com', // list of receivers
-							from: req.body.email,
+							// from: req.body.email,
 				    		subject: req.body.name + ' wants to join PRSD', // Subject line
 				    		text: req.body.comments // plaintext body
 				    	};

@@ -18,7 +18,7 @@ function NationalController() {
 		// Gather up email from form
 		var mailData = {
 				    		to: 'platteriverscubadivers@gmail.com, nppat@hotmail.com', // list of receivers
-							// from: req.body.email,
+							from: postmaster@mail.platteriverscubadivers.com,
 				    		subject: req.body.diver1_first_name + ' ' + req.body.diver1_last_name +' and ' + req.body.diver2_first_name + ' ' + req.body.diver2_last_name + ' have registered for Nationals', // Subject line
 				    		text:
 							'******** Diver 1 ********\n' +
