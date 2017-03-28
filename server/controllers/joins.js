@@ -8,14 +8,6 @@ function JoinController() {
 		// create transporter
 		// send mail with password confirmation
 
-		// var transporter = nodemailer.createTransport({
-		// 	service: 'Mailgun',
-		// 	auth: {
-		// 		user: 'postmaster@mail.platteriverscubadivers.com',
-		// 		pass: 'e4945d760f5c7db341726ad934b668d1'
-		// 	}
-		// });
-
 		var transporter = nodemailer.createTransport({
 			service: 'Gmail',
 			auth: {
@@ -26,7 +18,7 @@ function JoinController() {
 
 		// Gather up email from form
 		var mailData = {
-							from: 'Platte River Scuba Divers <platteriverscubadivers@gmail.com>',
+							from: 'platteriverscubadivers@gmail.com',
 				    		to: 'platteriverscubadivers@gmail.com, nppat@hotmail.com', // list of receivers
 				    		subject: req.body.name + ' wants to join PRSD', // Subject line
 				    		text: req.body.comments // plaintext body
