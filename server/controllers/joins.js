@@ -1,6 +1,5 @@
 // Require nodemailer module to send email
 var nodemailer = require('nodemailer');
-var smtpTransport = require('nodemailer-smtp-transport');
 
 function JoinController() {
 
@@ -17,13 +16,13 @@ function JoinController() {
 		// 	}
 		// });
 
-		var transporter = nodemailer.createTransport(smtpTransport({
+		var transporter = nodemailer.createTransport({
 			service: 'Gmail',
 			auth: {
 				user: 'platteriverscubadivers@gmail.com',
 				pass: 'scubadive17'
 			}
-		}));
+		});
 
 		// Gather up email from form
 		var mailData = {
