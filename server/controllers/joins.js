@@ -1,6 +1,6 @@
 // Require nodemailer module to send email
 var nodemailer = require('nodemailer');
-var smtpTransport = require('nodemailer-smtp-transport')
+var smtpTransport = require('nodemailer-smtp-transport');
 
 function JoinController() {
 
