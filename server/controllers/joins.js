@@ -8,18 +8,28 @@ function JoinController() {
 		// create transporter
 		// send mail with password confirmation
 
+		// var transporter = nodemailer.createTransport({
+		// 	service: 'Mailgun',
+		// 	auth: {
+		// 		user: 'postmaster@mail.platteriverscubadivers.com',
+		// 		pass: 'e4945d760f5c7db341726ad934b668d1'
+		// 	}
+		// });
+
 		var transporter = nodemailer.createTransport({
-			service: 'Mailgun',
+			service: 'Gmail',
 			auth: {
-				user: 'postmaster@mail.platteriverscubadivers.com',
-				pass: 'e4945d760f5c7db341726ad934b668d1'
+				user: 'platteriverscubadivers@gmail.com',
+				pass: 'scubadive17'
 			}
 		});
+
+
 
 		// Gather up email from form
 		var mailData = {
 				    		to: 'platteriverscubadivers@gmail.com, nppat@hotmail.com', // list of receivers
-							from: 'postmaster@mail.platteriverscubadivers.com',
+							from: 'platteriverscubadivers@gmail.com',
 				    		subject: req.body.name + ' wants to join PRSD', // Subject line
 				    		text: req.body.comments // plaintext body
 				    	};
