@@ -1,5 +1,6 @@
 // Require nodemailer module to send email
 var nodemailer = require('nodemailer');
+var smtpTransport = require('nodemailer-smtp-transport')
 
 function JoinController() {
 
@@ -16,20 +17,18 @@ function JoinController() {
 		// 	}
 		// });
 
-		var transporter = nodemailer.createTransport({
+		var transporter = nodemailer.createTransport(smtpTransport({
 			service: 'Gmail',
 			auth: {
 				user: 'platteriverscubadivers@gmail.com',
 				pass: 'scubadive17'
 			}
-		});
-
-
+		}));
 
 		// Gather up email from form
 		var mailData = {
+							from: 'Platte River Scuba Divers <platteriverscubadivers@gmail.com>',
 				    		to: 'platteriverscubadivers@gmail.com, nppat@hotmail.com', // list of receivers
-							from: 'platteriverscubadivers@gmail.com',
 				    		subject: req.body.name + ' wants to join PRSD', // Subject line
 				    		text: req.body.comments // plaintext body
 				    	};
