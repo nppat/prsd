@@ -7,18 +7,27 @@ function NationalController() {
 
 		// create transporter
 		// send mail with password confirmation
+
+		// var transporter = nodemailer.createTransport({
+		// 	service: 'Mailgun',
+		// 	auth: {
+		// 		user: 'postmaster@mail.platteriverscubadivers.com',
+		// 		pass: 'e4945d760f5c7db341726ad934b668d1'
+		// 	}
+		// });
+
 		var transporter = nodemailer.createTransport({
-			service: 'Mailgun',
+			service: 'Gmail',
 			auth: {
-				user: 'postmaster@mail.platteriverscubadivers.com',
-				pass: 'e4945d760f5c7db341726ad934b668d1'
+				user: 'platteriverscubadivers@gmail.com',
+				pass: 'scubadive17'
 			}
 		});
 
 		// Gather up email from form
 		var mailData = {
 				    		to: 'platteriverscubadivers@gmail.com, nppat@hotmail.com', // list of receivers
-							from: 'postmaster@mail.platteriverscubadivers.com',
+							from: 'platteriverscubadivers@gmail.com',
 				    		subject: req.body.diver1_first_name + ' ' + req.body.diver1_last_name +' and ' + req.body.diver2_first_name + ' ' + req.body.diver2_last_name + ' have registered for Nationals', // Subject line
 				    		text:
 							'******** Diver 1 ********\n' +
