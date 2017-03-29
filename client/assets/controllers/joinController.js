@@ -4,7 +4,7 @@ app.controller('JoinController', ['$scope', '$location', 'joinFactory', function
 			if (status == false) {
 				//  Flash error message
 				$scope.joinFail = 'Email not sent';  // send error message to user via Angular Messages
-				console.log('Error at joinController', response);
+				console.log(response);
 			} else {
 				$scope.joinSuccess = 'Email has been sent!';
 				$scope.newEmail = {};  // clear the form
