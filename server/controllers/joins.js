@@ -30,10 +30,10 @@ function JoinController() {
 		// Send email
 		transporter.sendMail(mailData, function(error, response) {
 			if(error){
-				console.log('[SERVER CONTROLLER JOINS ---> Send Email - ERROR] -- Email not sent');
+				console.log('[SERVER CONTROLLER JOINS ---> Send Email - ERROR] -- Email not sent', response);
 				res.json({ error: 'Email not sent'});
 			} else {
-				console.log('[SERVER CONTROLLER JOINS ---> Send Email - SUCCESS] -- Email successully sent');
+				console.log('[SERVER CONTROLLER JOINS ---> Send Email - SUCCESS] -- Email successully sent', response);
 				res.json({ success: 'Email has been sent.' })
 			}
 		});
