@@ -4,7 +4,7 @@ app.factory('joinFactory', ['$http', function($http) {
 
 		// call the server to process the new email message
 		this.send_email = function(newEmail, callback) {
-			
+
 			$http.post('/join/email', newEmail).then(
 				function success(response) {
 					// if error, send error
@@ -16,7 +16,7 @@ app.factory('joinFactory', ['$http', function($http) {
 					}
 				},
 				function error(response) {
-					console.log('[send email: ERROR] - Server failed to send email');
+					console.log('[send email: ERROR] - Server failed to send email', response);
 				}
 			);
 		};
