@@ -10,7 +10,7 @@ function JoinController() {
 
 		var transporter = nodemailer.createTransport({
 			service: 'Gmail',
-			port: 587,
+			port: 465,
 			secure: true,
 			auth: {
 				user: 'platteriverscubadivers@gmail.com',
@@ -31,10 +31,10 @@ function JoinController() {
 		// Send email
 		transporter.sendMail(mailData, function(error, response) {
 			if(error){
-				console.log('[SERVER CONTROLLER JOINS ---> Send Email - ERROR] -- Email not sent' + response);
+				console.log('[SERVER CONTROLLER JOINS ---> Send Email - ERROR] -- Email not sent ' + response);
 				res.json({ error: 'Email not sent'});
 			} else {
-				console.log('[SERVER CONTROLLER JOINS ---> Send Email - SUCCESS] -- Email successully sent' + response);
+				console.log('[SERVER CONTROLLER JOINS ---> Send Email - SUCCESS] -- Email successully sent ' + response);
 				res.json({ success: 'Email has been sent.' })
 			}
 		});
