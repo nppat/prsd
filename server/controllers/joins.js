@@ -9,12 +9,10 @@ function JoinController() {
 		// send mail with password confirmation
 
 		var transporter = nodemailer.createTransport({
-			service: 'Gmail',
-			port: 465,
-			secure: true,
+			service: 'Mailgun',
 			auth: {
-				user: 'platteriverscubadivers@gmail.com',
-				pass: 'scubadive17'
+				user: 'postmaster@mail.platteriverscubadivers.com',
+				pass: 'e4945d760f5c7db341726ad934b668d1'
 			}
 		});
 
