@@ -10,7 +10,8 @@ function JoinController() {
 
 		var transporter = nodemailer.createTransport({
 			service: 'Gmail',
-			port: 456,
+			port: 587,
+			secure: true;
 			auth: {
 				user: 'platteriverscubadivers@gmail.com',
 				pass: 'scubadive17'
