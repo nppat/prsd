@@ -42,6 +42,7 @@ var smtpTransport = require('nodemailer-smtp-transport');
 
 var transporter = nodemailer.createTransport(smtpTransport({
 				  service: 'Gmail',
+				  host: "smtp.gmail.com",
 				  auth: { user: 'platteriverscubadivers@gmail.com',
 				        pass: 'scubadive17' }
 				  }));
@@ -55,7 +56,7 @@ var transporter = nodemailer.createTransport(smtpTransport({
   }, function (error, response) {
     //Email not sent
     if (error) {
-      res.end("Email send Falied");
+      res.end("Email send Failed");
     }
     //email send sucessfully
     else {
