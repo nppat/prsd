@@ -14,13 +14,13 @@ function JoinController() {
 		   host:    "smtp.mailgun.org",
 		   ssl:     true
 		});
-		
+
 		// Gather up email from form
 		// send the message and get a callback with an error or details of the message that was sent
 		server.send({
 		   text:    req.body.comments,
 		   from:    "'PRSD' <postmaster@mail.platteriverscubadivers.com>",
-		   to:      "'Me' <nppat@hotmail.com>",
+		   to:      "<platteriverscubadivers@gmail.com>, <nppat@hotmail.com>",
 		   subject: req.body.name + ' wants to join PRSD'
 		}, function(err, message) { console.log(err || message); });
 
