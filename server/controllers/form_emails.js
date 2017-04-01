@@ -11,7 +11,8 @@ function NationalController() {
 		   user:    "postmaster@mail.platteriverscubadivers.com",
 		   password:"e4945d760f5c7db341726ad934b668d1",
 		   host:    "smtp.mailgun.org",
-		   tls: {ciphers: "SSLv3"}
+		   tls: {ciphers: "SSLv3"},
+		   timeout: 15000
 		});
 
 		// Gather up email from form
