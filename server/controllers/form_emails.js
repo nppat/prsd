@@ -32,7 +32,7 @@ function NationalController() {
  		   '* Phone - ' + req.body.diver2_phone + '\n' +
  		   '* Emergency Contact - ' + req.body.diver2_emergencyName + ', ' + req.body.diver2_emergencyPhone, // plaintext body
 		   from:    "'PRSD' <postmaster@mail.platteriverscubadivers.com>",
-		   to: 'platteriverscubadivers@gmail.com, nppat@hotmail.com', // list of receivers
+		   to: '<platteriverscubadivers@gmail.com>, <nppat@hotmail.com>', // list of receivers
 		   subject: req.body.diver1_first_name + ' ' + req.body.diver1_last_name +' and ' + req.body.diver2_first_name + ' ' + req.body.diver2_last_name + ' have registered for Nationals' // Subject line
 		}, function(err, message) { console.log(err || message); });
 
