@@ -3,6 +3,7 @@
 var express = require('express'),
 	bodyParser = require('body-parser'),
 	nodemailer = require('nodemailer'),
+	nodemailer_smtp_transport = require('nodemailer-smtp-transport'),
     app = express(),
     path = require('path');
 
