@@ -21,7 +21,7 @@ function JoinController() {
 		server.send({
 		   text:    req.body.comments,
 		   from:    "'PRSD' <postmaster@mail.platteriverscubadivers.com>",
-		   to:      "'PRSD' <platteriverscubadivers@gmail.com>",
+		   to:      "platteriverscubadivers@gmail.com",
 		   cc:		"nppat@hotmail.com",
 		   subject: req.body.name + ' wants to join PRSD'
 		}, function(err, message) { console.log(err || message); });
