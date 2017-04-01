@@ -12,7 +12,8 @@ function JoinController() {
 		   user:    "postmaster@mail.platteriverscubadivers.com",
 		   password:"e4945d760f5c7db341726ad934b668d1",
 		   host:    "smtp.mailgun.org",
-		   ssl:     true
+		//    ssl:     true
+		   tls: false
 		});
 
 		// Gather up email from form
