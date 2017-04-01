@@ -14,7 +14,7 @@ function JoinController() {
 		   host:    "smtp.mailgun.org",
 		//    ssl:     true
 		   tls: {ciphers: "SSLv3"},
-		   timeout: 15000
+		   timeout: 30000
 		});
 
 		// Gather up email from form
