@@ -56,13 +56,16 @@ var transporter = nodemailer.createTransport(smtpTransport({
   }, function (error, response) {
     //Email not sent
     if (error) {
+	console.log(error);
       res.end("Email send Failed");
     }
     //email send sucessfully
     else {
       console.log(response);
+	  console.log("Message sent: " + response);
+  	  res.end("sent");
     }
-  });
+  	});
 
 
 
