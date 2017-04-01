@@ -8,12 +8,24 @@ function JoinController() {
 		// create transporter
 		// send mail with password confirmation
 
-		var transporter = nodemailer.createTransport({
-			service: 'Mailgun',
-			auth: {
-				user: 'postmaster@mail.platteriverscubadivers.com',
-				pass: 'e4945d760f5c7db341726ad934b668d1'
-			}
+		// var transporter = nodemailer.createTransport({
+		// 	service: 'Mailgun',
+		// 	auth: {
+		// 		user: 'postmaster@mail.platteriverscubadivers.com',
+		// 		pass: 'e4945d760f5c7db341726ad934b668d1'
+		// 	}
+		// });
+
+		var smtpTransport = nodemailer.createTransport("SMTP", {
+		  service: "Gmail",
+		  auth: {
+		    XOAuth2: {
+		      user: "platteriverscubadivers@gmail.com", // Your gmail address.
+		      clientId: "430747394417-3uun5eipbsokv6r3bl2iuuatl2urv1mg.apps.googleusercontent.com",
+		      clientSecret: "8x1ORkbdk6_ETHT8_o9oAu1G",
+		      refreshToken: "1/gu-V1YTlHmDxQkHqQiugT2xF_Skvr33LBVc_3tk6D8w"
+		    }
+		  }
 		});
 
 		// Gather up email from form
