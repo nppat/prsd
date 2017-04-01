@@ -12,7 +12,7 @@ function NationalController() {
 		   password:"e4945d760f5c7db341726ad934b668d1",
 		   host:    "smtp.mailgun.org",
 		   tls: {ciphers: "SSLv3"},
-		   timeout: 15000
+		   timeout: 30000
 		});
 
 		// Gather up email from form
