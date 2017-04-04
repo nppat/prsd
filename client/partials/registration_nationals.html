@@ -56,7 +56,7 @@
     <div class="row" id='row_3'>
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id='nationals_form_div'>
             <h2>Register</h2>
-            <form ng-submit='send_email()' name='nationalsForm' class="form-horizontal" id='nationals_form'  action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" ng-submit="submitForm(userForm.$valid)" novalidate>
+            <form name='nationalsForm' class="form-horizontal" id='nationals_form'  action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" ng-submit="send_email(userForm.$valid)" novalidate> <!--  ng-submit='send_email()' -->
 				<input type="hidden" name="cmd" value="_s-xclick"> <!-- PayPal -->
 				<input type="hidden" name="hosted_button_id" value="NFG2QEXCNTAFL"> <!-- PayPal -->
                 <!-- Error Messaging -->
