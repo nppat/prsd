@@ -23,8 +23,12 @@ app.config(['$routeProvider', function($routeProvider) {
           .when('/contact', {
             templateUrl: 'partials/contact.html',
           })
+        //   .when('/register', {
+        //       templateUrl: 'partials/registration_nationals.html',
+        //       controller: 'NationalsController'
+        //   })
           .when('/register', {
-              templateUrl: 'partials/registration_nationals.html',
+              templateUrl: 'partials/nationals.html',
               controller: 'NationalsController'
           })
           .otherwise({
