@@ -16,8 +16,7 @@ app.factory('registrationFactory', ['$http', function($http) {
 					}
 				},
 				function error(response) {
-					console.log('[send email: ERROR] - Server failed to send email' + response);
-					error.log('[send email: ERROR] - Server failed to send email' + response);
+					console.log('[send email: ERROR] - Server failed to send email ' + response);
 				}
 			);
 		};
