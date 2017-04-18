@@ -145,8 +145,10 @@ html {
       -webkit-overflow-scrolling:touch;
     }
 
-  iframe {
-
+    ul.dropdown-menu{
+    position:static;
+    float:none;
+    width:auto;
   }
   /* ************************ Nationals partial styles ************************ */
   #nationals h1 {
@@ -239,6 +241,13 @@ html {
     .nav_home .navbar-nav>.active>a:hover {
       background-color: transparent;
     }
+
+    .dropdown-menu {
+        background-color: red;
+    }
+    .dropdown-menu a:hover {
+        background-color: #f1f1f1;
+    }
   /* Extra small devices (phones, up to 480px) */
   @media screen and (max-width: 767px) {
     .nav_home {
@@ -281,7 +290,7 @@ html {
   }
 
   ul.nav li a {
-    color: #fff !important;
+    color: #fff; /* !important */
   }
   ul.nav li.active a {
     color: #00ff00 !important;

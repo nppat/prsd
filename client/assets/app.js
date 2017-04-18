@@ -31,6 +31,9 @@ app.config(['$routeProvider', function($routeProvider) {
               templateUrl: 'partials/nationals.html',
               controller: 'NationalsController'
           })
+          .when('/register_june', {
+              templateUrl: 'partials/june.html'
+          })
           .otherwise({
             redirectTo: '/home'
           });
