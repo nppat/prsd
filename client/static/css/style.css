@@ -200,11 +200,6 @@ html {
       color: #fff;
     }
   }
-
- /* .brand {
-    color: #fff;
-  }*/
-
   .paypal_btn {
     background-color: #66ccff;
     color: #000;
@@ -232,6 +227,9 @@ html {
       color: #000;
     }
 /* ****************************************** Navbar ************************************************** */
+  .nav li a{
+      color: #fff !important;
+  }
   .nav_home {
     background: transparent;
     background-color: transparent;
@@ -288,10 +286,7 @@ html {
       font-size: 25px;
     }
   }
-
-  ul.nav li a {
-    color: #fff; /* !important */
-  }
+  
   ul.nav li.active a {
     color: #00ff00 !important;
   }
