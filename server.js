@@ -14,6 +14,9 @@ app.use(express.static(path.join(__dirname, './bower_components')));
 app.use(bodyParser.urlencoded({ extended: true}));
 app.use(bodyParser.json());
 
+// Use Prerender.io for proper search engine indexing
+app.use(require('prerender-node').set('prerenderToken', 'rgpPjXALwWc9YgQJvIt4'));
+
 // Require routes
 require('./server/config/routes')(app);
 
